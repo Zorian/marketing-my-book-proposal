@@ -518,6 +518,39 @@ p{font-size:1.02rem;color:var(--text)}
   transition:background .25s ease;
 }
 .cta-btn:hover{background:var(--gold-light)}
+
+/* Closing CTA (replaces investment) */
+.closing{
+  margin-top:30px;
+  padding:60px 50px;
+  background:var(--green-dim);
+  color:var(--cream);
+  text-align:center;
+}
+.closing-inner{max-width:560px;margin:0 auto}
+.closing-lbl{
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.28em;
+  color:var(--gold-light);
+  font-weight:600;
+  margin-bottom:18px;
+}
+.closing-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.2vw,2.8rem);
+  color:var(--cream);
+  font-weight:400;
+  line-height:1.15;
+  margin-bottom:14px;
+}
+.closing-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--green-ultra);
+  font-size:1.2rem;
+  margin-bottom:30px;
+}
 .signoff{
   margin-top:50px;
   padding-top:40px;
@@ -781,15 +814,11 @@ p{font-size:1.02rem;color:var(--text)}
     </div>
   </div>
 
-  <div class="investment fade">
-    <div>
-      <div class="inv-lbl">— Investment</div>
-      <div class="inv-title">£2,497 / month</div>
-      <div class="inv-sub">A 3-year strategic partnership.</div>
-      <div class="inv-includes">Strategic consult, platform build & maintenance, content engine, paid-ads management, newsletter & magazine ops, data tracking, quarterly reviews, and always-on advisory. 10% commission on digital revenue (products, courses, AI tools).</div>
-    </div>
-    <div class="cta-block">
-      <div class="cta-q">Ready to build the system?</div>
+  <div class="closing fade">
+    <div class="closing-inner">
+      <div class="closing-lbl">— Next Step</div>
+      <h3 class="closing-title">Ready to build the system?</h3>
+      <p class="closing-sub">Let's talk about the three years ahead.</p>
       <a href="#" class="cta-btn">Book a Call</a>
     </div>
   </div>
