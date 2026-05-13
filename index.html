@@ -354,6 +354,234 @@ p{font-size:1.02rem;color:var(--text)}
 }
 .platform-callout .h2{margin-bottom:14px}
 
+/* Page 4 — Platform Hero (the website as centerpiece) */
+.platform-hero{
+  margin:20px 0 60px;
+  padding:50px 50px 45px;
+  background:rgba(250,250,246,.07);
+  border:1px solid rgba(250,250,246,.18);
+  border-left:4px solid var(--gold);
+  position:relative;
+}
+.platform-hero::before{
+  content:"";
+  position:absolute;
+  top:-1px;right:-1px;
+  width:60px;height:60px;
+  border-top:1px solid var(--gold-light);
+  border-right:1px solid var(--gold-light);
+}
+.platform-hero-lbl{
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.28em;
+  color:var(--gold-light);
+  font-weight:600;
+  margin-bottom:16px;
+}
+.platform-hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,4vw,3.4rem);
+  color:var(--cream);
+  font-weight:400;
+  line-height:1.1;
+  margin-bottom:20px;
+  letter-spacing:-.01em;
+}
+.platform-hero-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;
+  font-style:italic;
+  color:var(--green-ultra);
+  line-height:1.5;
+  max-width:780px;
+  margin-bottom:32px;
+}
+.platform-hero-sub em{color:var(--gold-light);font-weight:500;font-style:italic}
+.platform-features{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px 30px;
+  margin-top:8px;
+}
+.pf-item{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  font-size:.98rem;
+  color:rgba(250,250,246,.92);
+  line-height:1.45;
+}
+.pf-num{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--gold-light);
+  font-size:1.1rem;
+  min-width:22px;
+}
+.audience-intro{margin-bottom:6px}
+
+/* Page 5 — Hub-and-spokes */
+.hub{
+  display:grid;
+  grid-template-columns:1fr 1.3fr 1fr;
+  gap:0;
+  margin:40px 0 70px;
+  align-items:stretch;
+}
+.hub-inputs,.hub-outputs{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  padding:30px 22px;
+  background:var(--white);
+  border:1px solid var(--border);
+  position:relative;
+}
+.hub-outputs{border-left:none}
+.hub-inputs{border-right:none}
+.hub-lbl-section{
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:.28em;
+  color:var(--green);
+  font-weight:600;
+  margin-bottom:8px;
+}
+.hub-outputs .hub-lbl-section{color:var(--gold)}
+.hub-card{
+  padding:16px 18px;
+  background:var(--green-pale);
+  border-left:3px solid var(--green-light);
+  position:relative;
+  transition:transform .25s ease,background .25s ease;
+}
+.hub-card:hover{transform:translateX(3px);background:var(--green-ultra)}
+.hub-card.out{
+  border-left:none;
+  border-right:3px solid var(--gold);
+  background:var(--gold-pale);
+}
+.hub-card.out:hover{background:#fbeec8}
+.hub-num{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--green);
+  font-size:1rem;
+  margin-bottom:4px;
+}
+.hub-card.out .hub-num{color:var(--gold);font-style:normal;font-size:1.3rem;line-height:1}
+.hub-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;
+  color:var(--ink);
+  font-weight:500;
+  margin-bottom:4px;
+  line-height:1.2;
+}
+.hub-desc{
+  font-size:.85rem;
+  color:var(--text);
+  line-height:1.45;
+}
+
+/* The Website — centerpiece */
+.hub-center{
+  background:var(--green-dim);
+  color:var(--cream);
+  padding:50px 30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  z-index:2;
+  box-shadow:0 0 40px rgba(26,107,74,.25);
+  overflow:hidden;
+}
+.hub-center::before{
+  content:"";
+  position:absolute;
+  top:50%;left:50%;
+  width:140%;height:140%;
+  background:radial-gradient(circle at center,rgba(232,184,75,.08) 0%,transparent 60%);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.hub-center-pulse{
+  position:absolute;
+  top:50%;left:50%;
+  width:14px;height:14px;
+  border-radius:50%;
+  background:var(--gold-light);
+  transform:translate(-50%,-50%);
+  opacity:0;
+  z-index:1;
+}
+.hub-center-lbl{
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.32em;
+  color:var(--gold-light);
+  font-weight:600;
+  margin-bottom:18px;
+  position:relative;
+}
+.hub-center-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,3.6vw,3.2rem);
+  font-weight:400;
+  letter-spacing:-.01em;
+  color:var(--cream);
+  margin-bottom:10px;
+  line-height:1.05;
+  position:relative;
+}
+.hub-center-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--green-ultra);
+  font-size:1.15rem;
+  margin-bottom:24px;
+  position:relative;
+}
+.hub-center-actions{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+  position:relative;
+  width:100%;
+  max-width:240px;
+}
+.hub-action{
+  padding:8px 10px;
+  background:rgba(250,250,246,.08);
+  border:1px solid rgba(232,184,75,.3);
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:var(--gold-light);
+  font-weight:600;
+}
+/* Arrows in & out — desktop only */
+@media(min-width:821px){
+  .hub-inputs::after,.hub-outputs::before{
+    content:"→";
+    position:absolute;
+    top:50%;
+    font-family:'Cormorant Garamond',serif;
+    color:var(--green);
+    font-size:1.8rem;
+    transform:translateY(-50%);
+    background:var(--cream);
+    padding:4px 8px;
+    z-index:3;
+  }
+  .hub-inputs::after{right:-18px}
+  .hub-outputs::before{left:-18px;color:var(--gold)}
+}
+
 /* ── PAGE 5 — ENGINE + INVESTMENT */
 #engine{background:var(--cream)}
 .engine-flow{
@@ -585,6 +813,12 @@ p{font-size:1.02rem;color:var(--text)}
   .flow-step::after{content:"↓";right:50%;top:auto;bottom:-12px;transform:translateX(50%)}
   .investment{padding:30px}
   .investment .cta-block{border-left:none;border-top:1px solid rgba(250,250,246,.2);padding-left:0;padding-top:30px}
+  .platform-features{grid-template-columns:1fr}
+  .platform-hero{padding:30px 24px}
+  .hub{grid-template-columns:1fr;gap:0}
+  .hub-inputs,.hub-outputs{border:1px solid var(--border);padding:24px 20px}
+  .hub-outputs{border-top:none}
+  .hub-center{padding:40px 24px;order:0}
 }
 
 /* ── FADE IN ANIMATION */
@@ -605,7 +839,7 @@ p{font-size:1.02rem;color:var(--text)}
   <div class="cover-mid fade">
     <div class="cover-title">Marketing<br>My Book<br><em>— a 3-year programme.</em></div>
     <div class="cover-outcome">
-      Build a business system around your book that compounds impact and income — over three years of strategic growth, data, and consult.
+      A website that becomes the engine of your business — turning your book, audience, and expertise into compounding impact and income over three years.
     </div>
   </div>
 
@@ -654,8 +888,8 @@ p{font-size:1.02rem;color:var(--text)}
     </div>
     <div class="step">
       <div class="step-num">04</div>
-      <div class="step-title">Platform Build</div>
-      <div class="step-desc">A platform website that engages your audiences with your book, products, and services — and converts them.</div>
+      <div class="step-title">The Website</div>
+      <div class="step-desc">The engine. Every audience, every channel, every campaign points back to it. Where attention becomes revenue.</div>
     </div>
   </div>
 </section>
@@ -709,30 +943,42 @@ p{font-size:1.02rem;color:var(--text)}
   <div class="page-num">iv.</div>
 
   <div class="approach-intro fade">
-    <div class="eyebrow">Routes & Platform</div>
-    <h2 class="display">The delivery.</h2>
-    <p class="lead">Two audiences. Two distinct paths to reach them. One platform that holds it all together.</p>
+    <div class="eyebrow">The Engine</div>
+    <h2 class="display">The website is everything.</h2>
+    <p class="lead">Every audience, every channel, every campaign points back to one place — the platform. It's where attention becomes revenue, and where revenue becomes data.</p>
+  </div>
+
+  <div class="platform-hero fade">
+    <div class="platform-hero-inner">
+      <div class="platform-hero-lbl">— Step 04 · The Platform</div>
+      <div class="platform-hero-title">A website built to convert.</div>
+      <div class="platform-hero-sub">
+        The book lives here. The products live here. The services, the newsletter, the data — all of it lives here. Every pound spent on traffic, every minute spent on content, every reader earned through the book, all funnels into one place: <em>the platform</em>.
+      </div>
+      <div class="platform-features">
+        <div class="pf-item"><span class="pf-num">i.</span><span>Engages your audience with your book & expertise</span></div>
+        <div class="pf-item"><span class="pf-num">ii.</span><span>Captures emails, leads, and intent signals</span></div>
+        <div class="pf-item"><span class="pf-num">iii.</span><span>Converts visitors into customers across every product</span></div>
+        <div class="pf-item"><span class="pf-num">iv.</span><span>Collects the data that improves it every quarter</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="audience-intro fade">
+    <div class="eyebrow" style="color:var(--gold-light)">Step 03 — Two Audiences, Both Routed Here</div>
   </div>
 
   <div class="audience-split">
     <div class="audience fade">
       <div class="aud-label">— Audience 01</div>
       <div class="aud-title">Professionals</div>
-      <div class="aud-route">Publicly accessible — they find you through search, LinkedIn, and industry channels.</div>
-      <p>Reachable through standard channels. They have budgets, decision power, and clear professional intent.</p>
+      <div class="aud-route">Publicly accessible — found through search, LinkedIn, and industry channels. Routed straight to the platform.</div>
     </div>
     <div class="audience fade">
       <div class="aud-label">— Audience 02</div>
       <div class="aud-title">Volunteers</div>
-      <div class="aud-route">They need to be mined. A newsletter and magazine — Big Issue in style, the opposite of Forbes.</div>
-      <p>A publication that meets them where they are, not where they aspire to be. Built to capture attention, build trust, and convert at their pace.</p>
+      <div class="aud-route">Mined through a newsletter and magazine — Big Issue in style, the opposite of Forbes. Captured, then routed to the platform.</div>
     </div>
-  </div>
-
-  <div class="platform-callout fade">
-    <div class="lbl">— Step 04 · The Platform</div>
-    <h3 class="h2">A website that turns attention into revenue.</h3>
-    <p>The platform sits at the centre. Every audience, every channel, every product points back to it. It engages, captures, and converts — and it gives us the data to do all of this better, every quarter, for three years.</p>
   </div>
 </section>
 
@@ -742,31 +988,61 @@ p{font-size:1.02rem;color:var(--text)}
   <div class="page-num">v.</div>
 
   <div class="approach-intro fade">
-    <div class="eyebrow">Traffic, Growth & Partnership</div>
-    <h2 class="display">How we grow it.</h2>
-    <p class="lead">Organic content brings them in. Paid ads expand the top of the funnel. Data closes the loop.</p>
+    <div class="eyebrow">Everything Routes Here</div>
+    <h2 class="display">The website is the engine.</h2>
+    <p class="lead">All traffic — organic, paid, referral, search — funnels into one place. The platform engages, captures, converts, and feeds back data we use to grow it.</p>
   </div>
 
-  <div class="engine-flow fade">
-    <div class="flow-step">
-      <div class="flow-num">i.</div>
-      <div class="flow-title">LinkedIn — Organic</div>
-      <div class="flow-desc">Thought leadership content driving professionals to the website.</div>
+  <div class="hub fade">
+    <div class="hub-inputs">
+      <div class="hub-lbl-section">— Traffic In</div>
+      <div class="hub-card">
+        <div class="hub-num">01</div>
+        <div class="hub-title">LinkedIn Organic</div>
+        <div class="hub-desc">Thought leadership content driving professionals straight to the platform.</div>
+      </div>
+      <div class="hub-card">
+        <div class="hub-num">02</div>
+        <div class="hub-title">Facebook Paid Ads</div>
+        <div class="hub-desc">Cold-traffic campaigns targeting volunteer audiences at scale.</div>
+      </div>
+      <div class="hub-card">
+        <div class="hub-num">03</div>
+        <div class="hub-title">Newsletter & Magazine</div>
+        <div class="hub-desc">The mining channel — turning cold attention into a warm list, routed back to the platform.</div>
+      </div>
     </div>
-    <div class="flow-step">
-      <div class="flow-num">ii.</div>
-      <div class="flow-title">Platform Website</div>
-      <div class="flow-desc">Where they meet your book, products, and services. Conversion happens here.</div>
+
+    <div class="hub-center">
+      <div class="hub-center-pulse"></div>
+      <div class="hub-center-lbl">— The Platform</div>
+      <div class="hub-center-title">The Website</div>
+      <div class="hub-center-sub">Everything points here.</div>
+      <div class="hub-center-actions">
+        <div class="hub-action">Engages</div>
+        <div class="hub-action">Captures</div>
+        <div class="hub-action">Converts</div>
+        <div class="hub-action">Reports</div>
+      </div>
     </div>
-    <div class="flow-step">
-      <div class="flow-num">iii.</div>
-      <div class="flow-title">Facebook — Paid</div>
-      <div class="flow-desc">Cold-traffic ads targeting volunteer audiences at scale.</div>
-    </div>
-    <div class="flow-step">
-      <div class="flow-num">iv.</div>
-      <div class="flow-title">Newsletter & Magazine</div>
-      <div class="flow-desc">The mining mechanism — converting cold attention into a warm list.</div>
+
+    <div class="hub-outputs">
+      <div class="hub-lbl-section">— What It Produces</div>
+      <div class="hub-card out">
+        <div class="hub-num">→</div>
+        <div class="hub-title">Revenue</div>
+        <div class="hub-desc">Book sales, digital products, programmes, services — all sold through the platform.</div>
+      </div>
+      <div class="hub-card out">
+        <div class="hub-num">→</div>
+        <div class="hub-title">Audience Data</div>
+        <div class="hub-desc">Who they are, what they want, what converts. We learn every visit.</div>
+      </div>
+      <div class="hub-card out">
+        <div class="hub-num">→</div>
+        <div class="hub-title">Compound Growth</div>
+        <div class="hub-desc">Data → better targeting → more traffic → more revenue. The loop closes every quarter.</div>
+      </div>
     </div>
   </div>
 
